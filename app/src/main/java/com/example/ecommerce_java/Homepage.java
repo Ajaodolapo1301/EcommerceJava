@@ -49,8 +49,6 @@ public class Homepage extends Fragment {
         };
 
 //        object for fragment inflation
-
-
             fragmentHomepageBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_homepage, container, false);
 //        View v =  inflater.inflate(R.layout.fragment_homepage, container, false);
 
