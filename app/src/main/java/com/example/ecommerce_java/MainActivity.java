@@ -1,7 +1,10 @@
 package com.example.ecommerce_java;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -43,6 +46,22 @@ public class MainActivity extends AppCompatActivity {
             return  true;
         }
 
+        int menuItemThatWasSelected = item.getItemId();
+
+        if (menuItemThatWasSelected == R.id.cart) {
+            Context context = MainActivity.this;
+            Toast.makeText(context, "Cart clicked", Toast.LENGTH_LONG).show();
+        }
+
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search, menu);
+        getMenuInflater().inflate(R.menu.cart, menu);
+
+        return super.onCreateOptionsMenu(menu);
     }
 }
